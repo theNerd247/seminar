@@ -1,0 +1,116 @@
+\documentclass[main.tex]{subfile}
+
+\begin{document}
+
+\section{Why This Seminar?} 
+\label{sec:why_this_seminar_}
+\begin{frame}{Why this Seminar?}
+	\begin{itemize}
+		\item Review C Programming Concepts
+		\item Prepare you for the microcontroller lab
+		\item Learn programming ``things'' you were never taught in school.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Live Demo}
+	\begin{itemize}
+		\item Setup your development environment.
+
+			\begin{itemize}
+				\item Windows: use \texttt{Notepad++} and \texttt{Cygwin}.
+				\item Mac: use the \texttt{Terminal} and \texttt{Sublime}.
+				\item Linux: use the \texttt{Terminal} and a text editor (\texttt{Vim},
+					\texttt{Gedit}, etc.).
+			\end{itemize}
+
+		\item Please note: some of the things we'll do in here you may/may not be using in
+			lab or class.
+	\end{itemize}
+\end{frame}
+
+% section why_this_seminar_ (end)
+
+\section{Variables}
+\label{sec:variables_scope_and_arrays}
+\begin{frame}{Variables - a Review}
+	\begin{itemize}
+		\item Data Containers in memory.
+		\item Categorized by ``Types'' - what kind of data am I dealing with?
+		\item Scope decides which variable to use.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Variables - Small Example}
+	\begin{lstlisting}[language=c,caption=Example of some variables]
+int child = 5;
+
+char age = 7;
+
+double matches = 256;
+
+bool mom = false;
+
+char[128] result = "A new home!";
+	\end{lstlisting}		
+
+\end{frame}
+
+% section variables (end)
+
+\section{Arrays}
+\label{sec:arrays}
+\begin{frame}{Arrays}
+	\begin{itemize}
+		\item Using a single variable is boring.
+		\item Arrays aren't scary - their just lists of the same ``type'' of data.
+			%This is a good reason to explain pointers...
+		\item Indexing arrays
+	\end{itemize}
+\end{frame}
+
+% section arrays (end)
+
+\section{Functions} 
+\label{sec:functions}
+
+% section functions (end)
+
+\section{Compiling} 
+\label{sec:compiling}
+
+
+
+% section compiling (end)
+
+\section{Debugging} 
+\label{sec:debugging}
+
+\begin{frame}{When Something Goes Wrong Blame:}
+
+	\begin{itemize}
+			\only<1->{\item The end user!}
+			\only<2->{\item The programmer (you)!}
+			\only<3->{\item The other programmer!}
+	\end{itemize}
+
+\end{frame}
+
+% section debugging (end)
+
+\section{Prewriting} 
+\label{sec:prewriting}
+
+% section prewriting (end)
+
+\section{Tips and Tricks} 
+\label{sec:tips_and_tricks}
+
+\begin{frame}{Tips and Tricks}
+	Generalize when Possible.
+
+	TODO: add example here.
+\end{frame}
+
+% section tips_and_tricks (end)
+
+\end{document}

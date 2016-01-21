@@ -1,0 +1,38 @@
+\documentclass[a4paper,titlepage]{beamer}
+
+% DO NOT REMOVE!
+\usepackage{subfiles}
+
+%include the packages and styles to use
+%\usepackage{package_name}
+\usepackage{proj}
+\usepackage{listings}
+
+\lstset
+{
+  numbers=left
+  ,basicstyle=\ttfamily
+  ,frame=l
+  ,language=c
+  ,tabsize=2
+}
+
+\begin{document}
+
+\title{A Small Seminar In C}
+\author{Noah Harvey 
+	\\ \texttt{noah.harvey@students.kennesaw.edu}
+	}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+	\tableofcontents
+\end{frame}
+
+% other sections of the document goes here
+\subfile{proj}
+
+\end{document}
