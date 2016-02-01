@@ -2,16 +2,18 @@ cmake_minimum_required(VERSION 2.6)
 #acknowledge policy push/pop
 cmake_policy(SET CMP0011 NEW) 
 
-set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+project("c-seminar")
 
-include(LaTeXBuild)
-include(FindLATEX)
-
-project("project")
+set(CMAKE_MODULE_PATH 
+	"${CMAKE_MODULE_PATH}"
+	"${PROJECT_SOURCE_DIR}/cmake/modulartex/cmake"
+	"${PROJECT_SOURCE_DIR}/cmake/arcb/cmake"
+	)
 
 # list of projects to build
 set(projects 
 	"proj"
+	"sampleCode"
 	)
 
 #build the project infos
