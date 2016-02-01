@@ -20,17 +20,29 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{Plan of Action}
+	\begin{itemize}
+		\item Research: The math of the problem.
+		\item Plan: From idea to program - prewriting
+		\item Execute: write and test the program
+	\end{itemize}
+\end{frame}
+
+\section{Prewriting} 
+\label{sec:prewriting}
+
 \begin{frame}[fragile]{Example Problem - Pumpkin Launch}
 	\begin{itemize}
 		\item Let's make a device to help us calculate the max distance and height
 				our pumpkin will travel
 		\item Depends on the launch angle: 
-			\[ \vec{v_{o}} = 
-				\begin{bmatrix} \cos{\theta} \\ \sin{\theta} \end{bmatrix} 
+			\[ 
+				\vec{r_o} = \vec{0} , 
+				\vec{v_{o}} = 
+					\begin{bmatrix} \cos{\theta} \\ \sin{\theta} \end{bmatrix} 
 			\]
 		\item Max height: 
 			\[
-				\vec{r}_{max} = 
 				\begin{bmatrix}
 					   0 & \frac{v_{o_{x}}}{g}
 					\\ 0 & \frac{v_{o_{y}}}{2 g}
@@ -42,21 +54,54 @@
 	% subsection pumpkin_launch_ (end)
 \end{frame}
 
-\begin{frame}{Plan of Action}
+\begin{frame}{Prewriting}
 	\begin{itemize}
-		\item The math of the problem.
-		\item How do we translate this into our physical device?
-		\item Programming is a language. - no kidding!
+		\item Plan how you'll go from math to code: psuedocode
+		\item Write out algorithms.
+		\item Develop program execution sequence.
 	\end{itemize}
 \end{frame}
 
+\begin{frame}[fragile]{Prewriting: Psuedocode}
+	\begin{itemize}
+		\item Use block Diagrams: \input{psuedoCodeBlkDia}
+		\item Use psuedocode: 
+			\begin{algorithmic}
+				\STATE $S \leftarrow \text{Get INPUT}$
+				\STATE $\text{OUTPUT} \leftarrow \text{Program } S$
+				\RETURN OUTPUT
+			\end{algorithmic}
+
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	
+	Now that we're ready to write the program how do we get tell the computer what
+	we want?
+
+	\begin{itemize}
+		\item Variables
+			\begin{itemize}
+				\item Regular Variables
+				\item Arrays
+			\end{itemize}
+		\item Functions
+		\item Control Statements
+	\end{itemize}
+
+\end{frame}
+
+
 \begin{frame}{Hello World}
-	Let's start with a hello world program.
+	Let's start with a hello world program. See \textit{helloWorld.c}
 	\begin{itemize}
 		\item What's the main thing?
 		\item Printf: short for ``print formated string''
 	\end{itemize}
 \end{frame}
+
+% section prewriting (end)
 
 % section why_this_seminar_ (end)
 
@@ -88,6 +133,61 @@
 
 % section variables (end)
 
+\section{Functions} 
+\label{sec:functions}
+
+\begin{frame}
+	\begin{itemize}
+		\item Functions are used to modularize code
+		\item Variables must be initialized at the top of the function.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\begin{itemize}
+		\item Function in math: $\text{name}(\text{args}) = \text{stuff}$
+		\item Example: $foo(x,y) = x+y$
+		\item Some basic function syntax:
+	\begin{lstlisting}
+<type> name(<args>)
+{
+
+}
+	\end{lstlisting}
+	\item Exmaple: 
+		\begin{lstlisting}
+double foo(double x, double y)
+{
+	return x+y;
+}
+		\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Functions and Scope}
+Scope decides which variable to use when its used within some piece of code.
+
+	\begin{lstlisting}[language=c]
+
+int x = 0;
+
+int f(int x)
+{
+	//which x is being used to calculate 
+	//the result of this function?
+	return (x+2);
+}
+
+int main(char argc, char** argv)
+{
+	int x = 0;
+}
+
+	\end{lstlisting}
+\end{frame}
+
+% section functions (end)
+
 \section{Arrays}
 \label{sec:arrays}
 
@@ -112,39 +212,6 @@
 
 % section arrays (end)
 
-\section{Functions} 
-\label{sec:functions}
-
-\begin{frame}
-	\begin{itemize}
-		\item Functions are used to modularize code
-		\item Variables must be initialized at the top of the function.
-	\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]{Functions and Scope}
-Scope decides which variable to use.
-
-	\begin{lstlisting}[language=c]
-
-int x = 0;
-
-int f(int x)
-{
-	//which x is being used to calculate 
-	//the result of this function?
-	return (x+2);
-}
-
-int main(char argc, char** argv)
-{
-	int x = 0;
-}
-
-	\end{lstlisting}
-\end{frame}
-
-% section functions (end)
 
 \section{Compiling} 
 \label{sec:compiling}
@@ -165,11 +232,6 @@ int main(char argc, char** argv)
 \end{frame}
 
 % section debugging (end)
-
-\section{Prewriting} 
-\label{sec:prewriting}
-
-% section prewriting (end)
 
 \section{Tips and Tricks} 
 \label{sec:tips_and_tricks}

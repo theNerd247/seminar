@@ -4,7 +4,7 @@ cmake_policy(SET CMP0011 NEW)
 
 include(LaTeXBuild)
 
-project("proj")
+project("slides")
 
 set(mainTexFile "main.tex")
 
@@ -19,6 +19,7 @@ set(includeList
 	"tex"
 	"sty"
 	"img"
+	"tikz"
 	)
 
 SetupLaTexBuildEnv (

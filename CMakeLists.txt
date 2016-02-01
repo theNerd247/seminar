@@ -12,7 +12,7 @@ set(CMAKE_MODULE_PATH
 
 # list of projects to build
 set(projects 
-	"proj"
+	"slides"
 	"sampleCode"
 	)
 

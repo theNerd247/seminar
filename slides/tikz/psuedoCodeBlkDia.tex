@@ -1,0 +1,9 @@
+
+\begin{tikzpicture}
+	\node[draw,rectangle] (in) at (0,0) {Input};
+	\node[draw,rectangle] (prog) at (2,0) {Program};
+	\node[draw,rectangle] (out) at (4,0) {Output};
+
+	\draw[->] (in) -- (prog);
+	\draw[->] (prog) -- (out);
+\end{tikzpicture}
