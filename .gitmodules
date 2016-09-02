@@ -1,0 +1,6 @@
+[submodule "cmake/arcb"]
+	path = cmake/arcb
+	url = https://github.com/theNerd247/arcb.git
+[submodule "cmake/modulartex"]
+	path = cmake/modulartex
+	url = https://github.com/theNerd247/modulartex.git
