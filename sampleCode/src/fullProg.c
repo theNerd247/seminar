@@ -172,6 +172,8 @@ int main(int argc, char const* argv[])
 
   double d;
 
+  //here
+
 	makeInitVel(1,M_PI/4,initVel);
 
 	d = maxDistance(initVel,G,N);

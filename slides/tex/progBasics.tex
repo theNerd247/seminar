@@ -1,0 +1,124 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+\section{Programing Basics} 
+\label{sec:programing_basics}
+
+\begin{frame}{Hello World}
+	Let's start with a hello world program. See \textit{helloWorld.c}
+	\begin{itemize}
+		\item What's the main thing?
+		\item Let's break something!
+		\item Questions?
+	\end{itemize}
+\end{frame}
+
+\section{Variables}
+\label{sec:variables_scope_and_arrays}
+
+\begin{frame}[fragile]{Variables - a Review}
+	\begin{itemize}
+		\item Containers for memory - why do we use variables in math?
+		\item Types: What kind of data am I using?
+		\item Syntax:
+			\begin{lstlisting}
+//a declaration
+<type> <name>; 
+
+//an instanciation 
+// (which means "instance creation")
+<name> = <value>;
+
+//both at the same time
+<type> <name>  = <value>;
+			\end{lstlisting}
+	\end{itemize}
+\end{frame}
+
+% section variables (end)
+
+\section{Functions} 
+\label{sec:functions}
+
+\begin{frame}{Functions}
+	\begin{itemize}
+		\item Functions are used to modularize code
+		\item Variables must be initialized at the top of the function.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Functions}
+	\begin{itemize}
+		\only<1->{
+			\item Function in math: $\text{name}(\text{args}) = \text{stuff}$
+			}
+		\only<2->{\item Example: $foo(x,y) = x+y$}
+		\only<3->{\item Some basic function syntax:}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Functions - An Example}
+	Function Syntax
+	\begin{lstlisting}
+<type> name(<args>)
+{
+
+}
+	\end{lstlisting}
+Exmaple: 
+		\begin{lstlisting}
+double foo(double x, double y)
+{
+	return x+y;
+}
+		\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Functions and Scope}
+Scope decides which variable to use when its used within some piece of code.
+
+	\begin{lstlisting}[language=c]
+
+int x = 0;
+
+int f(int x)
+{
+	//which x is being used to calculate 
+	//the result of this function?
+	return (x+2);
+}
+
+int main(char argc, char** argv)
+{
+	int x = 0;
+}
+
+	\end{lstlisting}
+\end{frame}
+
+% section functions (end)
+
+\section{Arrays}
+\label{sec:arrays}
+
+\begin{frame}[fragile]{Arrays}
+	\begin{itemize}
+		\item How can we store tables or lists of data? (pretend arrays didn't exist
+			yet)
+		\item Arrays - how we represent sets of data.
+		\item Syntax:
+			\begin{lstlisting}
+<type> <name> [<size>];
+
+<name>[<index>] = <value>;
+			\end{lstlisting}
+		\item why do indeces begin at 0?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Practical Use of Arrays}
+	Calculating max height: see: \textit{arrays.c}
+\end{frame}
+
+
+\end{document}	

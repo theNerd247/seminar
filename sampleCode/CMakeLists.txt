@@ -17,7 +17,7 @@ set(buildType "executable")
 
 # the source files located in the src/ directory
 set(sources 
-	"arrays.c"
+	"helloWorld.c"
 	)
 
 #the name of the projects this project depends on
