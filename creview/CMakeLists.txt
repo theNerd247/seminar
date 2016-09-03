@@ -4,7 +4,7 @@ cmake_policy(SET CMP0011 NEW)
 
 include(LaTeXBuild)
 
-project("slides")
+project("creview")
 
 set(mainTexFile "main.tex")
 
