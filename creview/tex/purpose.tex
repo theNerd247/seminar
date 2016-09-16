@@ -2,8 +2,29 @@
 
 \begin{document}
 
+\section{Before We Start} 
+\label{sec:tools}
+
+\begin{frame}{Connecting to Testing Server - Windows}
+	\begin{enumerate}
+		\item Download and run PuTTY: 
+			\\\url{https://the.earth.li/~sgtatham/putty/latest/x86/putty.exe}
+		\item Enter user name as prompted.
+		\item Password is your username.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{Connecting to Testing Server - Linux/Mac}
+	\begin{enumerate}
+		\item Open the terminal.
+		\item Run the command: \cmd{ssh -p32100 <user-name>@TODO}
+		\item The password is the same as \cmd{<user-name>}
+	\end{enumerate}
+\end{frame}
+% section tools (end)
+
 \section{Why This Seminar?} 
-\label{sec:why_this_seminar_}
+\label{sec:why_this_seminar}
 \begin{frame}{Why this Seminar?}
 	\begin{itemize}
 		\item Review C Programming Concepts
@@ -12,11 +33,12 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Live Demo}
+\begin{frame}{A note about the playground...}
 	\begin{itemize}
-		\item Use Windows Visual Studio to follow along!
-		\item \emph{Note: I'm not using Win VS ... I'm on Linux!}
-		\item \textbf{Please play around and break things!}
+			\item You're on a Linux machine! 
+			\item Use \cmd{\$ nano tst.c} to edit your code.
+			\item When in \texttt{nano} use \cmd{\^Z} to go back to the terminal.
+			\item Use \cmd{\$ make} to build your code.
 	\end{itemize}
 \end{frame}
 

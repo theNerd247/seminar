@@ -35,6 +35,53 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}[fragile]{Operators - Logical}
+	AKA boolean operators.
+	\begin{lstlisting}
+		char a = 0;
+		int b = 1;
+
+		char x = 0 && 1;
+		char y = b || a;
+		char z = a^b;
+		char n = !a;
+	\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Operators - Arithmetic}
+	Let's play with some operators!
+	\begin{lstlisting}
+int a = 1; 
+double b = 2;
+
+int c = a + b;
+double x = a / b;
+long y = a*b;
+char z = a % b;
+	\end{lstlisting}
+
+	\begin{itemize}
+		\item Try changing the types. 
+		\item Chain multiple operators in one statement.
+		\item Try doing weird things like divide by zero.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Operators - Binary}
+	\begin{lstlisting}
+
+char c = ~a;
+char x = 1<<3;
+long y = 7 & 1<<2;
+char z = x | 5;
+	\end{lstlisting}
+
+	\begin{itemize}
+		\item Try changing the types. 
+		\item Chain multiple operators in one statement.
+	\end{itemize}
+\end{frame}
+
 % section variables (end)
 
 \section{Functions} 
@@ -65,7 +112,9 @@
 
 }
 	\end{lstlisting}
-Exmaple: 
+\end{frame}
+
+\begin{frame}[fragile]{Functions - An Example}
 		\begin{lstlisting}
 double foo(double x, double y)
 {
@@ -96,6 +145,15 @@ int main(char argc, char** argv)
 	\end{lstlisting}
 \end{frame}
 
+\begin{frame}[fragile]{Functions and Scope}
+	Rule of Thumb!
+	\begin{itemize}
+		\item Never use global variables
+		\item Why? \only<2->{You may never know what kind of data is in it} 
+	\end{itemize}
+	Remember: All rules can be broken given the right circumstances.
+\end{frame}
+
 % section functions (end)
 
 \section{Arrays}
@@ -103,9 +161,7 @@ int main(char argc, char** argv)
 
 \begin{frame}[fragile]{Arrays}
 	\begin{itemize}
-		\item How can we store tables or lists of data? (pretend arrays didn't exist
-			yet)
-		\item Arrays - how we represent sets of data.
+		\item Arrays - how we represent sets of homogenous data.
 		\item Syntax:
 			\begin{lstlisting}
 <type> <name> [<size>];
@@ -116,8 +172,49 @@ int main(char argc, char** argv)
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]{Practical Use of Arrays}
-	Calculating max height: see: \textit{arrays.c}
+\begin{frame}[fragile]{Arrays - Behind the Scenes}
+	What Arrays Really (But Not Really) look like
+
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=0.5\linewidth]{arrayPic.jpg}
+		\end{center}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}[fragile]{How To Pass Arrays To Functions}
+	We use special things call pointers. Use Google to learn more about them.
+	Practice with them is the best way to understand them.
+
+	\begin{lstlisting}
+		int func(int* xs, size_t xsSize)
+		{
+			... 
+			xs[0] = ... ;
+			...
+
+			return 0;
+		}
+	\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Arrays - Rules of Arrays}
+
+	\begin{itemize}
+		\item Don't return arrays. Just modify them...or pass in another array to
+			store the result. 
+		\item \textbf{Don't forget to pass in the array size as a parameter!}
+		\item Always check to make sure an array isn't null: 
+			\begin{lstlisting}
+				...
+				if(xs == NULL)
+					return 1;
+				...
+				
+			\end{lstlisting}
+	\end{itemize}
+
 \end{frame}
 
 
